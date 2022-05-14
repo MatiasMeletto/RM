@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class formMenu : Form
+    public partial class FormPrincipal : Form
     {
+
         private Form formularioActivo = null;
-        private void abrirFormularioHijo(Form form)
+        private void AbrirFormularioHijo(Form form)
         {
             if (formularioActivo != null)
                 formularioActivo.Close();
@@ -21,48 +22,30 @@ namespace WindowsFormsApp1
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
-            panelAccesorios.Controls.Add(form);
-            panelAccesorios.Tag = form;
-            panelAccesorios.BringToFront();
+            panelPrincipal.Controls.Add(form);
+            panelPrincipal.Tag = form;
+            form.BringToFront();
             form.Show();
         }
-        private void ComienzoPaneles()
+        private void EsconderMenu()
         {
-            //setea los paneles al iniciar el programa
-            panelAccesorios.Visible = false;
-            panelPerfiles.Visible = false;
+            btnAccesorios.SendToBack();
+            btnPerfiles.SendToBack();
+            logoMenu.SendToBack();
         }
-        private void EsconderPaneles()
-        {
-            if (panelAccesorios.Visible)
-                panelAccesorios.Visible = false;
-            if (panelPerfiles.Visible)
-                panelPerfiles.Visible = false;
-        }
-        private void MostrarPanel(Panel panel)
-        {
-            if (!panel.Visible)
-            {
-                EsconderPaneles();
-                panel.Visible = true;
-            }
-            else 
-                panel.Visible = false;
-        }
-        public formMenu()
+        public FormPrincipal()
         {
             InitializeComponent();
             Bitmap imgFondo = new Bitmap(Application.StartupPath + @"\img\Sin título.jpg");
-            this.BackgroundImage = imgFondo;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-            ComienzoPaneles();
-            panelAccesorios.SendToBack();
+            panelPrincipal.BackgroundImage = imgFondo;
+            panelPrincipal.BackgroundImageLayout = ImageLayout.Stretch;
+
         }
 
         private void btnAccesorios_Click(object sender, EventArgs e)
         {
-            MostrarPanel(panelAccesorios );
-            abrirFormularioHijo(new FormAccesorios());
+            EsconderMenu();
+            AbrirFormularioHijo(new FormAccesorios());
         }
     }
 }

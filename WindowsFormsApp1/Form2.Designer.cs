@@ -34,7 +34,7 @@
             // 
             // btnAccesoriosVolverMenu
             // 
-            this.btnAccesoriosVolverMenu.BackColor = System.Drawing.Color.Gray;
+            this.btnAccesoriosVolverMenu.BackColor = System.Drawing.Color.Silver;
             this.btnAccesoriosVolverMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccesoriosVolverMenu.BackgroundImage")));
             this.btnAccesoriosVolverMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAccesoriosVolverMenu.FlatAppearance.BorderSize = 0;
@@ -50,7 +50,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1600, 800);
             this.Controls.Add(this.btnAccesoriosVolverMenu);

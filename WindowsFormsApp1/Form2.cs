@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         }
 
         private void btnAccesoriosVolverMenu_Click(object sender, EventArgs e)
-        {
+        {           
             this.Close();
         }
     }
