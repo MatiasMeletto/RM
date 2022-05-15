@@ -12,13 +12,9 @@ namespace WindowsFormsApp1
 {
     public partial class FormPrincipal : Form
     {
-
-        private Form formularioActivo = null;
+        #region Metodos
         private void AbrirFormularioHijo(Form form)
         {
-            if (formularioActivo != null)
-                formularioActivo.Close();
-            formularioActivo = form;
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
@@ -33,6 +29,8 @@ namespace WindowsFormsApp1
             btnPerfiles.SendToBack();
             logoMenu.SendToBack();
         }
+        #endregion
+        #region Form
         public FormPrincipal()
         {
             InitializeComponent();
@@ -41,11 +39,19 @@ namespace WindowsFormsApp1
             panelPrincipal.BackgroundImageLayout = ImageLayout.Stretch;
 
         }
-
+        #endregion
+        #region Eventos
         private void btnAccesorios_Click(object sender, EventArgs e)
         {
             EsconderMenu();
-            AbrirFormularioHijo(new FormAccesorios());
+            AbrirFormularioHijo(new FormAccesoriosMenu());
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que quiere salir de la aplicacion?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Close();
+        }
+        #endregion
     }
 }

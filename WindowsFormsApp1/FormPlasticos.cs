@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class FormAccesorios : Form
+    public partial class FormPlasticos : Form
     {
-        public FormAccesorios()
+        public FormPlasticos()
         {
             InitializeComponent();
-        }
-
-        private void btnAccesoriosVolverMenu_Click(object sender, EventArgs e)
-        {           
-            this.Close();
         }
     }
 }

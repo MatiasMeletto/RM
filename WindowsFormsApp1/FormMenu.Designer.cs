@@ -33,12 +33,14 @@
             this.btnAccesorios = new System.Windows.Forms.Button();
             this.btnPerfiles = new System.Windows.Forms.Button();
             this.logoMenu = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPrincipal
             // 
+            this.panelPrincipal.Controls.Add(this.btnSalir);
             this.panelPrincipal.Controls.Add(this.btnAccesorios);
             this.panelPrincipal.Controls.Add(this.btnPerfiles);
             this.panelPrincipal.Controls.Add(this.logoMenu);
@@ -89,6 +91,22 @@
             this.logoMenu.TabIndex = 3;
             this.logoMenu.TabStop = false;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Calibri", 15F);
+            this.btnSalir.Location = new System.Drawing.Point(579, 674);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(450, 57);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -100,6 +118,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1600, 800);
             this.Name = "FormPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock";
             this.panelPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).EndInit();
@@ -113,6 +132,7 @@
         private System.Windows.Forms.Button btnAccesorios;
         private System.Windows.Forms.Button btnPerfiles;
         private System.Windows.Forms.PictureBox logoMenu;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 
