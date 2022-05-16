@@ -44,6 +44,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelCambiableAccesorios = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelNav = new System.Windows.Forms.Panel();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoVolver)).BeginInit();
             this.panelUser.SuspendLayout();
@@ -72,6 +73,7 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panelContainer.Controls.Add(this.panelNav);
             this.panelContainer.Controls.Add(this.btnCierres);
             this.panelContainer.Controls.Add(this.logoVolver);
             this.panelContainer.Controls.Add(this.btnCerraduras);
@@ -269,6 +271,14 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // panelNav
+            // 
+            this.panelNav.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panelNav.Location = new System.Drawing.Point(0, 242);
+            this.panelNav.Name = "panelNav";
+            this.panelNav.Size = new System.Drawing.Size(7, 319);
+            this.panelNav.TabIndex = 11;
+            // 
             // FormAccesoriosMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -310,5 +320,6 @@
         private System.Windows.Forms.Button btnCierres;
         private System.Windows.Forms.Panel panelCambiableAccesorios;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panelNav;
     }
 }

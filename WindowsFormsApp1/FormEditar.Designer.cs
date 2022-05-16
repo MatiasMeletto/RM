@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class FormRuedas
+    partial class FormEditar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F);
-            this.label1.Location = new System.Drawing.Point(555, 245);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 91);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ruedas";
-            // 
-            // FormRuedas
+            // FormEditar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1326, 800);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.ClientSize = new System.Drawing.Size(520, 640);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormRuedas";
-            this.Text = "FormRuedas";
+            this.Name = "FormEditar";
+            this.Text = "FormEditar";
+            this.UseWaitCursor = true;
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
     }
 }

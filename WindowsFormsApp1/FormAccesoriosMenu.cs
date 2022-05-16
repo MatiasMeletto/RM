@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class FormAccesoriosMenu : Form
     {
+        private Button btnActual = null;
         private Form formularioActivo = null;
         private void AbrirFormularioHijo(Form form)
         {
@@ -26,6 +27,15 @@ namespace WindowsFormsApp1
             form.BringToFront();
             form.Show();
         }
+        private void BtnSeleccionado(Button button)
+        {
+            button.BackColor = Color.FromArgb(46, 51, 73);
+            btnActual = button;
+        }
+        private void BtnDeseleccionado(Button button)
+        {
+            button.BackColor = Color.FromArgb(24, 30, 54);
+        }
         public FormAccesoriosMenu()
         {
             InitializeComponent();
@@ -38,75 +48,95 @@ namespace WindowsFormsApp1
 
         private void btnPlasticos_Click(object sender, EventArgs e)
         {
-            btnPlasticos.BackColor = Color.FromArgb(46, 51, 73);
+            panelNav.Height = btnPlasticos.Height;
+            panelNav.Top = btnPlasticos.Top;
+            panelNav.Left = btnPlasticos.Left;
+            BtnSeleccionado(btnPlasticos);
             AbrirFormularioHijo(new FormPlasticos());
-            User.Text = "Plasticos asdfjkwfa";
         }
 
         private void btnPlasticos_Leave(object sender, EventArgs e)
         {
-            btnPlasticos.BackColor = Color.FromArgb(24, 30, 54);
+            BtnDeseleccionado(btnPlasticos);
         }
 
         private void btnRuedas_Click(object sender, EventArgs e)
         {
-            btnRuedas.BackColor = Color.FromArgb(46, 51, 73);
+            panelNav.Height = btnRuedas.Height;
+            panelNav.Top = btnRuedas.Top;
+            panelNav.Left = btnRuedas.Left;
+            BtnSeleccionado(btnRuedas);
             AbrirFormularioHijo(new FormRuedas());
         }
 
         private void btnEscuadras_Click(object sender, EventArgs e)
         {
-            btnEscuadras.BackColor = Color.FromArgb(46, 51, 73);
+            panelNav.Height = btnEscuadras.Height;
+            panelNav.Top = btnEscuadras.Top;
+            panelNav.Left = btnEscuadras.Left;
+            BtnSeleccionado(btnEscuadras);
         }
 
         private void btnBisagras_Click(object sender, EventArgs e)
         {
-            btnBisagras.BackColor = Color.FromArgb(46, 51, 73);
+            panelNav.Height = btnBisagras.Height;
+            panelNav.Top = btnBisagras.Top;
+            panelNav.Left = btnBisagras.Left;
+            BtnSeleccionado(btnBisagras);
         }
 
         private void btnManijas_Click(object sender, EventArgs e)
         {
-            btnManijas.BackColor = Color.FromArgb(46, 51, 73);
+            panelNav.Height = btnManijas.Height;
+            panelNav.Top = btnManijas.Top;
+            panelNav.Left = btnManijas.Left;
+            BtnSeleccionado(btnManijas);
         }
 
         private void btnCerraduras_Click(object sender, EventArgs e)
         {
-            btnCerraduras.BackColor = Color.FromArgb(46, 51, 73);
+            panelNav.Height = btnCerraduras.Height;
+            panelNav.Top = btnCerraduras.Top;
+            panelNav.Left = btnCerraduras.Left;
+            BtnSeleccionado(btnCerraduras);
         }
 
         private void btnCierres_Click(object sender, EventArgs e)
         {
-            btnCierres.BackColor = Color.FromArgb(46, 51, 73);
+            panelNav.Height = btnCierres.Height;
+            panelNav.Top = btnCierres.Top;
+            panelNav.Left = btnCierres.Left;
+            BtnSeleccionado(btnCierres);
         }
 
         private void btnRuedas_Leave(object sender, EventArgs e)
         {
-            btnRuedas.BackColor = Color.FromArgb(24, 30, 54);
+            BtnDeseleccionado(btnRuedas);
         }
 
         private void btnEscuadras_Leave(object sender, EventArgs e)
         {
-            btnEscuadras.BackColor = Color.FromArgb(24, 30, 54);
+            BtnDeseleccionado(btnEscuadras);
         }
 
         private void btnBisagras_Leave(object sender, EventArgs e)
         {
-            btnBisagras.BackColor = Color.FromArgb(24, 30, 54);
+            BtnDeseleccionado(btnBisagras);
         }
 
         private void btnManijas_Leave(object sender, EventArgs e)
         {
-            btnManijas.BackColor = Color.FromArgb(24, 30, 54);
+            BtnDeseleccionado(btnManijas);
         }
 
         private void btnCerraduras_Leave(object sender, EventArgs e)
         {
-            btnCerraduras.BackColor = Color.FromArgb(24, 30, 54);
+            BtnDeseleccionado(btnCerraduras);
         }
 
         private void btnCierres_Leave(object sender, EventArgs e)
         {
-            btnCierres.BackColor = Color.FromArgb(24, 30, 54);
+            BtnDeseleccionado(btnCierres);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -114,7 +144,11 @@ namespace WindowsFormsApp1
             if (formularioActivo != null)
                 formularioActivo.Close();
             else
-                return;
+                return;  
+            panelNav.Top = btnPlasticos.Top;
+            panelNav.Left = btnPlasticos.Left;
+            panelNav.Height = 259;
+            BtnDeseleccionado(btnActual);
         }
     }
 }
