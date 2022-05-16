@@ -104,7 +104,6 @@
             this.btnCierres.Text = "Cierres ";
             this.btnCierres.UseVisualStyleBackColor = true;
             this.btnCierres.Click += new System.EventHandler(this.btnCierres_Click);
-            this.btnCierres.Leave += new System.EventHandler(this.btnCierres_Leave);
             // 
             // logoVolver
             // 
@@ -132,7 +131,6 @@
             this.btnCerraduras.Text = "Cerraduras";
             this.btnCerraduras.UseVisualStyleBackColor = true;
             this.btnCerraduras.Click += new System.EventHandler(this.btnCerraduras_Click);
-            this.btnCerraduras.Leave += new System.EventHandler(this.btnCerraduras_Leave);
             // 
             // btnManijas
             // 
@@ -148,7 +146,6 @@
             this.btnManijas.Text = "Manijas";
             this.btnManijas.UseVisualStyleBackColor = true;
             this.btnManijas.Click += new System.EventHandler(this.btnManijas_Click);
-            this.btnManijas.Leave += new System.EventHandler(this.btnManijas_Leave);
             // 
             // btnBisagras
             // 
@@ -164,7 +161,6 @@
             this.btnBisagras.Text = "Bisagras";
             this.btnBisagras.UseVisualStyleBackColor = true;
             this.btnBisagras.Click += new System.EventHandler(this.btnBisagras_Click);
-            this.btnBisagras.Leave += new System.EventHandler(this.btnBisagras_Leave);
             // 
             // btnEscuadras
             // 
@@ -180,7 +176,6 @@
             this.btnEscuadras.Text = "Escuadras";
             this.btnEscuadras.UseVisualStyleBackColor = true;
             this.btnEscuadras.Click += new System.EventHandler(this.btnEscuadras_Click);
-            this.btnEscuadras.Leave += new System.EventHandler(this.btnEscuadras_Leave);
             // 
             // btnRuedas
             // 
@@ -196,7 +191,6 @@
             this.btnRuedas.Text = "Ruedas";
             this.btnRuedas.UseVisualStyleBackColor = true;
             this.btnRuedas.Click += new System.EventHandler(this.btnRuedas_Click);
-            this.btnRuedas.Leave += new System.EventHandler(this.btnRuedas_Leave);
             // 
             // btnPlasticos
             // 
@@ -212,7 +206,6 @@
             this.btnPlasticos.Text = "Plasticos";
             this.btnPlasticos.UseVisualStyleBackColor = true;
             this.btnPlasticos.Click += new System.EventHandler(this.btnPlasticos_Click);
-            this.btnPlasticos.Leave += new System.EventHandler(this.btnPlasticos_Leave);
             // 
             // panelUser
             // 

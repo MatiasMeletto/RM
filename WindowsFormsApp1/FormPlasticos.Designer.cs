@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPlasticos));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,6 +42,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadSueltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadBolsasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,9 +129,9 @@
             this.panelModificarCantidad.Controls.Add(this.btnCerrar);
             this.panelModificarCantidad.Controls.Add(this.label1);
             this.panelModificarCantidad.Controls.Add(this.textBox2);
-            this.panelModificarCantidad.Location = new System.Drawing.Point(474, 349);
+            this.panelModificarCantidad.Location = new System.Drawing.Point(379, 330);
             this.panelModificarCantidad.Name = "panelModificarCantidad";
-            this.panelModificarCantidad.Size = new System.Drawing.Size(310, 132);
+            this.panelModificarCantidad.Size = new System.Drawing.Size(405, 151);
             this.panelModificarCantidad.TabIndex = 5;
             // 
             // btnCerrar
@@ -139,7 +141,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Calibri", 9F);
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnCerrar.Location = new System.Drawing.Point(287, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(382, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(23, 27);
             this.btnCerrar.TabIndex = 8;
@@ -153,11 +155,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.Font = new System.Drawing.Font("Calibri", 11F);
             this.label1.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label1.Location = new System.Drawing.Point(31, 44);
+            this.label1.Location = new System.Drawing.Point(30, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 18);
+            this.label1.Size = new System.Drawing.Size(278, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "Ingresar cantidad que se va a usar:";
             // 
@@ -169,9 +171,23 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.textBox2.Location = new System.Drawing.Point(34, 63);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(238, 24);
+            this.textBox2.Size = new System.Drawing.Size(333, 24);
             this.textBox2.TabIndex = 6;
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnRefrescar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.BackgroundImage")));
+            this.btnRefrescar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRefrescar.FlatAppearance.BorderSize = 0;
+            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefrescar.Location = new System.Drawing.Point(1117, 139);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(31, 25);
+            this.btnRefrescar.TabIndex = 6;
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -235,6 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1326, 800);
+            this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.panelModificarCantidad);
             this.Controls.Add(this.btnEditarCantidad);
             this.Controls.Add(this.btnEditarLista);
@@ -268,5 +285,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnRefrescar;
     }
 }

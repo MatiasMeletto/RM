@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.btnAccesorios = new System.Windows.Forms.Button();
             this.btnPerfiles = new System.Windows.Forms.Button();
             this.logoMenu = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +50,22 @@
             this.panelPrincipal.Size = new System.Drawing.Size(1600, 800);
             this.panelPrincipal.TabIndex = 0;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Calibri", 15F);
+            this.btnSalir.Location = new System.Drawing.Point(580, 658);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(450, 57);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // btnAccesorios
             // 
             this.btnAccesorios.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -57,7 +73,7 @@
             this.btnAccesorios.FlatAppearance.BorderSize = 0;
             this.btnAccesorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccesorios.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccesorios.Location = new System.Drawing.Point(800, 593);
+            this.btnAccesorios.Location = new System.Drawing.Point(801, 577);
             this.btnAccesorios.Name = "btnAccesorios";
             this.btnAccesorios.Size = new System.Drawing.Size(450, 57);
             this.btnAccesorios.TabIndex = 5;
@@ -72,7 +88,7 @@
             this.btnPerfiles.FlatAppearance.BorderSize = 0;
             this.btnPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerfiles.Font = new System.Drawing.Font("Calibri", 15F);
-            this.btnPerfiles.Location = new System.Drawing.Point(350, 593);
+            this.btnPerfiles.Location = new System.Drawing.Point(351, 577);
             this.btnPerfiles.Name = "btnPerfiles";
             this.btnPerfiles.Size = new System.Drawing.Size(450, 57);
             this.btnPerfiles.TabIndex = 4;
@@ -84,28 +100,12 @@
             this.logoMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.logoMenu.BackColor = System.Drawing.Color.Transparent;
             this.logoMenu.Image = ((System.Drawing.Image)(resources.GetObject("logoMenu.Image")));
-            this.logoMenu.Location = new System.Drawing.Point(350, 150);
+            this.logoMenu.Location = new System.Drawing.Point(351, 134);
             this.logoMenu.Name = "logoMenu";
             this.logoMenu.Size = new System.Drawing.Size(900, 500);
             this.logoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoMenu.TabIndex = 3;
             this.logoMenu.TabStop = false;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Calibri", 15F);
-            this.btnSalir.Location = new System.Drawing.Point(579, 674);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(450, 57);
-            this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FormPrincipal
             // 

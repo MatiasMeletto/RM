@@ -103,5 +103,10 @@ namespace WindowsFormsApp1
             else
                 indice = dataGridView1.SelectedRows[0].Index;
         }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            LeerArchivo();
+        }
     }
 }

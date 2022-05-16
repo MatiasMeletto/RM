@@ -54,7 +54,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btnAgregar.Location = new System.Drawing.Point(143, 191);
+            this.btnAgregar.Location = new System.Drawing.Point(143, 222);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(238, 62);
             this.btnAgregar.TabIndex = 5;
