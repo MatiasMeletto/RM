@@ -14,9 +14,19 @@ namespace WindowsFormsApp1
 {
     public partial class FormPlasticos : Form
     {
+        bool suelta = false;
         int indice = -1;
         List<Plastico> plasticos = new List<Plastico>();
 
+        private void AbrirFormularioHijo(Form form)
+        {
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form);
+            form.BringToFront();
+            form.Show();
+        }
         private void LeerArchivo()
         {
             FileInfo fi = new FileInfo("plasticos.json");
@@ -55,16 +65,18 @@ namespace WindowsFormsApp1
         {
             textBox1.Text = "";
         }
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEditarlista_Click(object sender, EventArgs e)
         {
-            Form form = new FormEditorP();
-            form.Show();
+            panel1.Enabled = true;
+            panel1.Visible = true;
+            panel1.BringToFront();
         }
 
-        private void btnEditarCantidad_Click(object sender, EventArgs e)
+        private void btnEditarCantidadS_Click(object sender, EventArgs e)
         {
             if (indice != -1)
             {
+                suelta = true;
                 panelModificarCantidad.Visible = true;
                 panelModificarCantidad.BringToFront();
             }
@@ -82,13 +94,26 @@ namespace WindowsFormsApp1
         {
             if (e.KeyCode == Keys.Enter)
             {
-                plasticos[indice].CantidadSuelta = int.Parse(textBox2.Text);
-                textBox2.Text = "";
-                indice = -1;
-                panelModificarCantidad.Visible = false;
-                panelModificarCantidad.SendToBack();
-                EscribirLista();
-                ActualizarGrilla();
+                if (suelta)
+                {
+                    plasticos[indice].CantidadSuelta = int.Parse(textBox2.Text);
+                    textBox2.Text = "";
+                    indice = -1;
+                    panelModificarCantidad.Visible = false;
+                    panelModificarCantidad.SendToBack();
+                    EscribirLista();
+                    ActualizarGrilla();
+                }
+                else
+                {
+                    plasticos[indice].CantidadBolsas = int.Parse(textBox2.Text);
+                    textBox2.Text = "";
+                    indice = -1;
+                    panelModificarCantidad.Visible = false;
+                    panelModificarCantidad.SendToBack();
+                    EscribirLista();
+                    ActualizarGrilla();
+                }
             }
         }
         private void FormPlasticos_FormClosing(object sender, FormClosingEventArgs e)
@@ -107,6 +132,38 @@ namespace WindowsFormsApp1
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             LeerArchivo();
+        }
+
+        private void btnEditarCantidadB_Click(object sender, EventArgs e)
+        {
+            if (indice != -1)
+            {
+                suelta = false;
+                panelModificarCantidad.Visible = true;
+                panelModificarCantidad.BringToFront();
+            }
+            else
+                MessageBox.Show("Debe seleccionar al menos un elemento");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Enabled = false;
+            panel1.Visible = false;
+            panel1.SendToBack();
+            EscribirLista();
+            ActualizarGrilla();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormAgregarP());
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormEditar());
         }
     }
 }

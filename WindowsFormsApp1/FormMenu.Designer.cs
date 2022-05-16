@@ -57,7 +57,7 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Calibri", 15F);
-            this.btnSalir.Location = new System.Drawing.Point(580, 658);
+            this.btnSalir.Location = new System.Drawing.Point(576, 632);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(450, 57);
             this.btnSalir.TabIndex = 6;
@@ -73,7 +73,7 @@
             this.btnAccesorios.FlatAppearance.BorderSize = 0;
             this.btnAccesorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccesorios.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccesorios.Location = new System.Drawing.Point(801, 577);
+            this.btnAccesorios.Location = new System.Drawing.Point(797, 551);
             this.btnAccesorios.Name = "btnAccesorios";
             this.btnAccesorios.Size = new System.Drawing.Size(450, 57);
             this.btnAccesorios.TabIndex = 5;
@@ -88,7 +88,7 @@
             this.btnPerfiles.FlatAppearance.BorderSize = 0;
             this.btnPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerfiles.Font = new System.Drawing.Font("Calibri", 15F);
-            this.btnPerfiles.Location = new System.Drawing.Point(351, 577);
+            this.btnPerfiles.Location = new System.Drawing.Point(347, 551);
             this.btnPerfiles.Name = "btnPerfiles";
             this.btnPerfiles.Size = new System.Drawing.Size(450, 57);
             this.btnPerfiles.TabIndex = 4;
@@ -100,7 +100,7 @@
             this.logoMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.logoMenu.BackColor = System.Drawing.Color.Transparent;
             this.logoMenu.Image = ((System.Drawing.Image)(resources.GetObject("logoMenu.Image")));
-            this.logoMenu.Location = new System.Drawing.Point(351, 134);
+            this.logoMenu.Location = new System.Drawing.Point(347, 108);
             this.logoMenu.Name = "logoMenu";
             this.logoMenu.Size = new System.Drawing.Size(900, 500);
             this.logoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

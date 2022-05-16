@@ -37,12 +37,17 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnEditarLista = new System.Windows.Forms.Button();
-            this.btnEditarCantidad = new System.Windows.Forms.Button();
+            this.btnEditarCantidadS = new System.Windows.Forms.Button();
             this.panelModificarCantidad = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnRefrescar = new System.Windows.Forms.Button();
+            this.btnEditarCantidadB = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadSueltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadBolsasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +55,7 @@
             this.plasticoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelModificarCantidad.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.plasticoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,23 +108,23 @@
             this.btnEditarLista.TabIndex = 3;
             this.btnEditarLista.Text = "Editar lista";
             this.btnEditarLista.UseVisualStyleBackColor = false;
-            this.btnEditarLista.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEditarLista.Click += new System.EventHandler(this.btnEditarlista_Click);
             // 
-            // btnEditarCantidad
+            // btnEditarCantidadS
             // 
-            this.btnEditarCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEditarCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.btnEditarCantidad.FlatAppearance.BorderSize = 0;
-            this.btnEditarCantidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarCantidad.Font = new System.Drawing.Font("Calibri", 11F);
-            this.btnEditarCantidad.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEditarCantidad.Location = new System.Drawing.Point(156, 687);
-            this.btnEditarCantidad.Name = "btnEditarCantidad";
-            this.btnEditarCantidad.Size = new System.Drawing.Size(179, 38);
-            this.btnEditarCantidad.TabIndex = 4;
-            this.btnEditarCantidad.Text = "Modificar cantidad";
-            this.btnEditarCantidad.UseVisualStyleBackColor = false;
-            this.btnEditarCantidad.Click += new System.EventHandler(this.btnEditarCantidad_Click);
+            this.btnEditarCantidadS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditarCantidadS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnEditarCantidadS.FlatAppearance.BorderSize = 0;
+            this.btnEditarCantidadS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarCantidadS.Font = new System.Drawing.Font("Calibri", 11F);
+            this.btnEditarCantidadS.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEditarCantidadS.Location = new System.Drawing.Point(156, 687);
+            this.btnEditarCantidadS.Name = "btnEditarCantidadS";
+            this.btnEditarCantidadS.Size = new System.Drawing.Size(200, 38);
+            this.btnEditarCantidadS.TabIndex = 4;
+            this.btnEditarCantidadS.Text = "Modificar cantidad /s ";
+            this.btnEditarCantidadS.UseVisualStyleBackColor = false;
+            this.btnEditarCantidadS.Click += new System.EventHandler(this.btnEditarCantidadS_Click);
             // 
             // panelModificarCantidad
             // 
@@ -151,9 +157,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11F);
             this.label1.ForeColor = System.Drawing.Color.LightSkyBlue;
@@ -165,9 +169,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.textBox2.Location = new System.Drawing.Point(34, 63);
             this.textBox2.Name = "textBox2";
@@ -177,6 +179,7 @@
             // 
             // btnRefrescar
             // 
+            this.btnRefrescar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnRefrescar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.BackgroundImage")));
             this.btnRefrescar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -188,6 +191,75 @@
             this.btnRefrescar.TabIndex = 6;
             this.btnRefrescar.UseVisualStyleBackColor = false;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
+            // btnEditarCantidadB
+            // 
+            this.btnEditarCantidadB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEditarCantidadB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnEditarCantidadB.FlatAppearance.BorderSize = 0;
+            this.btnEditarCantidadB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarCantidadB.Font = new System.Drawing.Font("Calibri", 11F);
+            this.btnEditarCantidadB.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEditarCantidadB.Location = new System.Drawing.Point(362, 687);
+            this.btnEditarCantidadB.Name = "btnEditarCantidadB";
+            this.btnEditarCantidadB.Size = new System.Drawing.Size(200, 38);
+            this.btnEditarCantidadB.TabIndex = 7;
+            this.btnEditarCantidadB.Text = "Modificar cantidad /b";
+            this.btnEditarCantidadB.UseVisualStyleBackColor = false;
+            this.btnEditarCantidadB.Click += new System.EventHandler(this.btnEditarCantidadB_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnAgregar);
+            this.panel1.Location = new System.Drawing.Point(452, 95);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(520, 640);
+            this.panel1.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 9F);
+            this.button1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.Location = new System.Drawing.Point(497, -1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 27);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.button2.Location = new System.Drawing.Point(143, 325);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(238, 62);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Editar accesorios";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAgregar.Location = new System.Drawing.Point(143, 221);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(238, 62);
+            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.Text = "Agregar accesorios";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -251,9 +323,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1326, 800);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnEditarCantidadB);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.panelModificarCantidad);
-            this.Controls.Add(this.btnEditarCantidad);
+            this.Controls.Add(this.btnEditarCantidadS);
             this.Controls.Add(this.btnEditarLista);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
@@ -264,6 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelModificarCantidad.ResumeLayout(false);
             this.panelModificarCantidad.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.plasticoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -275,7 +350,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnEditarLista;
-        private System.Windows.Forms.Button btnEditarCantidad;
+        private System.Windows.Forms.Button btnEditarCantidadS;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadSueltaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadBolsasDataGridViewTextBoxColumn;
@@ -286,5 +361,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnRefrescar;
+        private System.Windows.Forms.Button btnEditarCantidadB;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
