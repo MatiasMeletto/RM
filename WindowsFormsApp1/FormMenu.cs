@@ -34,10 +34,6 @@ namespace WindowsFormsApp1
         public FormPrincipal()
         {
             InitializeComponent();
-            Bitmap imgFondo = new Bitmap(Application.StartupPath + @"\img\Sin título.jpg");
-            panelPrincipal.BackgroundImage = imgFondo;
-            panelPrincipal.BackgroundImageLayout = ImageLayout.Stretch;
-
         }
         #endregion
         #region Eventos
@@ -50,7 +46,7 @@ namespace WindowsFormsApp1
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que quiere salir de la aplicacion?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                Close();
+                Application.Exit();
         }
         #endregion
     }

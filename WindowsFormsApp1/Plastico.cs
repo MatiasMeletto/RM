@@ -14,12 +14,12 @@ namespace WindowsFormsApp1
         public int CantidadBolsas { get; set; }
         public string Descripcion { get; set; }
 
-        public Plastico(string codigo, int cantidadSuelta, int cantidadBolsas, string descripcion)
+        public Plastico(string codigo, int cantidadSuelta, int cantidadBolsas, string ddescripcion)
         {
             Codigo = codigo;
             CantidadSuelta = cantidadSuelta;
             CantidadBolsas = cantidadBolsas;
-            Descripcion = descripcion;
+            Descripcion = ddescripcion;
         }
     }
 }

@@ -56,6 +56,9 @@ namespace WindowsFormsApp1
         public FormPlasticos()
         {
             InitializeComponent();
+            panel1.Enabled = false;
+            panel1.Visible = false;
+            panel1.SendToBack();
             panelModificarCantidad.Visible = false;
             panelModificarCantidad.SendToBack();
             LeerArchivo();
@@ -151,8 +154,7 @@ namespace WindowsFormsApp1
             panel1.Enabled = false;
             panel1.Visible = false;
             panel1.SendToBack();
-            EscribirLista();
-            ActualizarGrilla();
+            LeerArchivo();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
