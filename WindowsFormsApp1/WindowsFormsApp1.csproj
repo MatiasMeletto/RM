@@ -85,7 +85,7 @@
     <Compile Include="FormRuedas.Designer.cs">
       <DependentUpon>FormRuedas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plastico.cs" />
+    <Compile Include="plastico\Plastico.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="plastico\FormAgregarP.resx">

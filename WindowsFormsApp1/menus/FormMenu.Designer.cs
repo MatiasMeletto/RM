@@ -40,6 +40,8 @@
             // 
             // panelPrincipal
             // 
+            this.panelPrincipal.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelPrincipal.Controls.Add(this.btnSalir);
             this.panelPrincipal.Controls.Add(this.btnAccesorios);
             this.panelPrincipal.Controls.Add(this.btnPerfiles);
@@ -100,10 +102,10 @@
             this.logoMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.logoMenu.BackColor = System.Drawing.Color.Transparent;
             this.logoMenu.Image = ((System.Drawing.Image)(resources.GetObject("logoMenu.Image")));
-            this.logoMenu.Location = new System.Drawing.Point(347, 108);
+            this.logoMenu.Location = new System.Drawing.Point(347, 24);
             this.logoMenu.Name = "logoMenu";
-            this.logoMenu.Size = new System.Drawing.Size(900, 500);
-            this.logoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoMenu.Size = new System.Drawing.Size(900, 535);
+            this.logoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoMenu.TabIndex = 3;
             this.logoMenu.TabStop = false;
             // 
