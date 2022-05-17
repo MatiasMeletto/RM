@@ -55,17 +55,11 @@
     <Compile Include="FormAgregarP.Designer.cs">
       <DependentUpon>FormAgregarP.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditar.cs">
+    <Compile Include="FormEditarP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditar.Designer.cs">
-      <DependentUpon>FormEditar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormEditorP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormEditorP.Designer.cs">
-      <DependentUpon>FormEditorP.cs</DependentUpon>
+    <Compile Include="FormEditarP.Designer.cs">
+      <DependentUpon>FormEditarP.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPlasticos.cs">
       <SubType>Form</SubType>
@@ -97,11 +91,8 @@
     <EmbeddedResource Include="FormAgregarP.resx">
       <DependentUpon>FormAgregarP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditar.resx">
-      <DependentUpon>FormEditar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormEditorP.resx">
-      <DependentUpon>FormEditorP.cs</DependentUpon>
+    <EmbeddedResource Include="FormEditarP.resx">
+      <DependentUpon>FormEditarP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>

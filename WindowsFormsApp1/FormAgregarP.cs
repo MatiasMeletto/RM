@@ -61,6 +61,14 @@ namespace WindowsFormsApp1
             {
                 Errores.Add("Debe ingresar cantidad de bolsas");
             }
+            else
+            {
+                bool resultado = int.TryParse(textBox3.Text, out _);
+                if (!resultado)
+                {
+                    Errores.Add("Debe ingresar un número en cantidad bolsas");
+                }
+            }
 
             if (string.IsNullOrEmpty(textBox4.Text))
             {
