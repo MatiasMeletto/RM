@@ -76,6 +76,7 @@ namespace WindowsFormsApp1
             panelNav.Top = btnEscuadras.Top;
             panelNav.Left = btnEscuadras.Left;
             BtnSeleccionado(btnEscuadras);
+            AbrirFormularioHijo(new FormEscuadras());
         }
 
         private void btnBisagras_Click(object sender, EventArgs e)

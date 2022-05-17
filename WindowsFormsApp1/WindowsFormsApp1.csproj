@@ -49,22 +49,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="plastico\FormAgregarP.cs">
+    <Compile Include="escuadras\FormEscuadras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="plastico\FormAgregarP.Designer.cs">
+    <Compile Include="escuadras\FormEscuadras.Designer.cs">
+      <DependentUpon>FormEscuadras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manijas\FormManijas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manijas\FormManijas.Designer.cs">
+      <DependentUpon>FormManijas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plasticos\FormAgregarP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plasticos\FormAgregarP.Designer.cs">
       <DependentUpon>FormAgregarP.cs</DependentUpon>
     </Compile>
-    <Compile Include="plastico\FormEditarP.cs">
+    <Compile Include="plasticos\FormEditarP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="plastico\FormEditarP.Designer.cs">
+    <Compile Include="plasticos\FormEditarP.Designer.cs">
       <DependentUpon>FormEditarP.cs</DependentUpon>
     </Compile>
-    <Compile Include="plastico\FormPlasticos.cs">
+    <Compile Include="plasticos\FormPlasticos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="plastico\FormPlasticos.Designer.cs">
+    <Compile Include="plasticos\FormPlasticos.Designer.cs">
       <DependentUpon>FormPlasticos.cs</DependentUpon>
     </Compile>
     <Compile Include="menus\FormMenu.cs">
@@ -79,19 +91,38 @@
     <Compile Include="menus\FormAccesoriosMenu.Designer.cs">
       <DependentUpon>FormAccesoriosMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRuedas.cs">
+    <Compile Include="ruedas\EditarR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRuedas.Designer.cs">
+    <Compile Include="ruedas\EditarR.Designer.cs">
+      <DependentUpon>EditarR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ruedas\FormAgregarR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ruedas\FormAgregarR.Designer.cs">
+      <DependentUpon>FormAgregarR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ruedas\FormRuedas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ruedas\FormRuedas.Designer.cs">
       <DependentUpon>FormRuedas.cs</DependentUpon>
     </Compile>
-    <Compile Include="plastico\Plastico.cs" />
+    <Compile Include="plasticos\Plastico.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="plastico\FormAgregarP.resx">
+    <Compile Include="ruedas\Rueda.cs" />
+    <EmbeddedResource Include="escuadras\FormEscuadras.resx">
+      <DependentUpon>FormEscuadras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manijas\FormManijas.resx">
+      <DependentUpon>FormManijas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plasticos\FormAgregarP.resx">
       <DependentUpon>FormAgregarP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="plastico\FormEditarP.resx">
+    <EmbeddedResource Include="plasticos\FormEditarP.resx">
       <DependentUpon>FormEditarP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menus\FormMenu.resx">
@@ -100,10 +131,16 @@
     <EmbeddedResource Include="menus\FormAccesoriosMenu.resx">
       <DependentUpon>FormAccesoriosMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="plastico\FormPlasticos.resx">
+    <EmbeddedResource Include="plasticos\FormPlasticos.resx">
       <DependentUpon>FormPlasticos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRuedas.resx">
+    <EmbeddedResource Include="ruedas\EditarR.resx">
+      <DependentUpon>EditarR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ruedas\FormAgregarR.resx">
+      <DependentUpon>FormAgregarR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ruedas\FormRuedas.resx">
       <DependentUpon>FormRuedas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -117,7 +154,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\FormRuedas.datasource" />
     <None Include="Properties\DataSources\Plastico.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.ruedas.Rueda.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,6 +172,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sin título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bisagras\" />
+    <Folder Include="cerraduras\" />
+    <Folder Include="cierres\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
