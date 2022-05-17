@@ -39,6 +39,7 @@ namespace WindowsFormsApp1
         private List<string> ValidarDatos()
         {
             List<string> Errores = new List<string>();
+
             if (string.IsNullOrEmpty(textBox1.Text))
             {
                 Errores.Add("Debe ingresar codigo");
@@ -48,10 +49,26 @@ namespace WindowsFormsApp1
             {
                 Errores.Add("Debe ingresar cantidad suelta");
             }
+            else
+            {
+                bool resultado = int.TryParse(textBox2.Text, out _);
+                if (!resultado)
+                {
+                    Errores.Add("Debe ingresar un número en cantidad suelta");
+                }
+            }
 
             if (string.IsNullOrEmpty(textBox3.Text))
             {
-                Errores.Add("Debe ingresar cantidad bolsas");
+                Errores.Add("Debe ingresar cantidad de bolsas");
+            }
+            else
+            {
+                bool resultado = int.TryParse(textBox3.Text, out _);
+                if (!resultado)
+                {
+                    Errores.Add("Debe ingresar un número en cantidad bolsas");
+                }
             }
 
             if (string.IsNullOrEmpty(textBox4.Text))

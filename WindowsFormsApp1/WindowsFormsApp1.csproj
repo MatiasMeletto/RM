@@ -49,34 +49,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAgregarP.cs">
+    <Compile Include="plastico\FormAgregarP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAgregarP.Designer.cs">
+    <Compile Include="plastico\FormAgregarP.Designer.cs">
       <DependentUpon>FormAgregarP.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditarP.cs">
+    <Compile Include="plastico\FormEditarP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditarP.Designer.cs">
+    <Compile Include="plastico\FormEditarP.Designer.cs">
       <DependentUpon>FormEditarP.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPlasticos.cs">
+    <Compile Include="plastico\FormPlasticos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPlasticos.Designer.cs">
+    <Compile Include="plastico\FormPlasticos.Designer.cs">
       <DependentUpon>FormPlasticos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenu.cs">
+    <Compile Include="menus\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenu.Designer.cs">
+    <Compile Include="menus\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAccesoriosMenu.cs">
+    <Compile Include="menus\FormAccesoriosMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAccesoriosMenu.Designer.cs">
+    <Compile Include="menus\FormAccesoriosMenu.Designer.cs">
       <DependentUpon>FormAccesoriosMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRuedas.cs">
@@ -88,19 +88,19 @@
     <Compile Include="Plastico.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAgregarP.resx">
+    <EmbeddedResource Include="plastico\FormAgregarP.resx">
       <DependentUpon>FormAgregarP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditarP.resx">
+    <EmbeddedResource Include="plastico\FormEditarP.resx">
       <DependentUpon>FormEditarP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu.resx">
+    <EmbeddedResource Include="menus\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAccesoriosMenu.resx">
+    <EmbeddedResource Include="menus\FormAccesoriosMenu.resx">
       <DependentUpon>FormAccesoriosMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPlasticos.resx">
+    <EmbeddedResource Include="plastico\FormPlasticos.resx">
       <DependentUpon>FormPlasticos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRuedas.resx">

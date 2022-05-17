@@ -27,6 +27,24 @@ namespace WindowsFormsApp1
             form.BringToFront();
             form.Show();
         }
+        private List<string> ValidarDatos()
+        {
+            List<string> Errores = new List<string>();
+
+            if (string.IsNullOrEmpty(textBox2.Text))
+            {
+                Errores.Add("Debe ingresar una cantidad");
+            }
+            else
+            {
+                bool resultado = int.TryParse(textBox2.Text, out _);
+                if (!resultado)
+                {
+                    Errores.Add("Debe ingresar un número en la cantidad");
+                }
+            }
+            return Errores;
+        }
         private void LeerArchivo()
         {
             FileInfo fi = new FileInfo("plasticos.json");
@@ -97,6 +115,14 @@ namespace WindowsFormsApp1
         {
             if (e.KeyCode == Keys.Enter)
             {
+                List<string> Errores = ValidarDatos();
+                if (Errores.Count != 0)
+                {
+                    foreach (string E in Errores)
+                        MessageBox.Show(E);
+                    return;
+                }
+
                 if (suelta)
                 {
                     plasticos[indice].CantidadSuelta = int.Parse(textBox2.Text);
