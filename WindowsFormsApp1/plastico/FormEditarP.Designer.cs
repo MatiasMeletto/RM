@@ -114,49 +114,53 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Gray;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(374, 522);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(105, 36);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEditar.BackColor = System.Drawing.Color.Gray;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEditar.ForeColor = System.Drawing.Color.Black;
             this.btnEditar.Location = new System.Drawing.Point(263, 522);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(105, 36);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnVolver
             // 
-            this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnVolver.BackColor = System.Drawing.Color.Gray;
+            this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnVolver.ForeColor = System.Drawing.Color.Black;
             this.btnVolver.Location = new System.Drawing.Point(12, 592);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(105, 36);
             this.btnVolver.TabIndex = 4;
             this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // panelEdicion
             // 
+            this.panelEdicion.BackColor = System.Drawing.Color.Gray;
             this.panelEdicion.Controls.Add(this.btnCancelarEdicion);
             this.panelEdicion.Controls.Add(this.btnAceptarEdicion);
             this.panelEdicion.Controls.Add(this.label4);
@@ -177,10 +181,10 @@
             // btnCancelarEdicion
             // 
             this.btnCancelarEdicion.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnCancelarEdicion.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancelarEdicion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCancelarEdicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarEdicion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarEdicion.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancelarEdicion.ForeColor = System.Drawing.Color.Black;
             this.btnCancelarEdicion.Location = new System.Drawing.Point(12, 592);
             this.btnCancelarEdicion.Name = "btnCancelarEdicion";
             this.btnCancelarEdicion.Size = new System.Drawing.Size(183, 36);
@@ -191,10 +195,10 @@
             // 
             // btnAceptarEdicion
             // 
-            this.btnAceptarEdicion.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAceptarEdicion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAceptarEdicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarEdicion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarEdicion.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAceptarEdicion.ForeColor = System.Drawing.Color.Black;
             this.btnAceptarEdicion.Location = new System.Drawing.Point(325, 592);
             this.btnAceptarEdicion.Name = "btnAceptarEdicion";
             this.btnAceptarEdicion.Size = new System.Drawing.Size(183, 36);
@@ -207,7 +211,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(97, 312);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 25);
@@ -228,7 +232,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(97, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 25);
@@ -248,7 +252,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(97, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 25);
@@ -268,7 +272,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(97, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 25);
@@ -288,7 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(520, 640);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEditar);
@@ -296,6 +300,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.panelEdicion);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ForeColor = System.Drawing.SystemColors.Desktop;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEditarP";
             this.Text = "FormEditar";

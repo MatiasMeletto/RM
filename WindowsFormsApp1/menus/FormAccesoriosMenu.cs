@@ -27,9 +27,9 @@ namespace WindowsFormsApp1
             form.BringToFront();
             form.Show();
         }
-        private void BtnSeleccionado(Button button)
+        private void BtnSeleccionado(Button button, int pC, int sC, int tC)
         {
-            button.BackColor = Color.FromArgb(46, 51, 73);
+            button.BackColor = Color.FromArgb(pC, sC, tC);
             btnActual = button;
         }
         private void BtnDeseleccionado(Button button)
@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
             panelNav.Height = btnPlasticos.Height;
             panelNav.Top = btnPlasticos.Top;
             panelNav.Left = btnPlasticos.Left;
-            BtnSeleccionado(btnPlasticos);
+            BtnSeleccionado(btnPlasticos, 26, 51, 73);
             AbrirFormularioHijo(new FormPlasticos());
         }
 
@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
             panelNav.Height = btnRuedas.Height;
             panelNav.Top = btnRuedas.Top;
             panelNav.Left = btnRuedas.Left;
-            BtnSeleccionado(btnRuedas);
+            BtnSeleccionado(btnRuedas, 152, 233, 186);
             AbrirFormularioHijo(new FormRuedas());
         }
 
@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
             panelNav.Height = btnEscuadras.Height;
             panelNav.Top = btnEscuadras.Top;
             panelNav.Left = btnEscuadras.Left;
-            BtnSeleccionado(btnEscuadras);
+            BtnSeleccionado(btnEscuadras, 26, 51, 73);
         }
 
         private void btnBisagras_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
             panelNav.Height = btnBisagras.Height;
             panelNav.Top = btnBisagras.Top;
             panelNav.Left = btnBisagras.Left;
-            BtnSeleccionado(btnBisagras);
+            BtnSeleccionado(btnBisagras, 26, 51, 73);
         }
 
         private void btnManijas_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
             panelNav.Height = btnManijas.Height;
             panelNav.Top = btnManijas.Top;
             panelNav.Left = btnManijas.Left;
-            BtnSeleccionado(btnManijas);
+            BtnSeleccionado(btnManijas, 26, 51, 73);
         }
 
         private void btnCerraduras_Click(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
             panelNav.Height = btnCerraduras.Height;
             panelNav.Top = btnCerraduras.Top;
             panelNav.Left = btnCerraduras.Left;
-            BtnSeleccionado(btnCerraduras);
+            BtnSeleccionado(btnCerraduras, 26, 51, 73);
         }
 
         private void btnCierres_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace WindowsFormsApp1
             panelNav.Height = btnCierres.Height;
             panelNav.Top = btnCierres.Top;
             panelNav.Left = btnCierres.Left;
-            BtnSeleccionado(btnCierres);
+            BtnSeleccionado(btnCierres, 26, 51, 73);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
