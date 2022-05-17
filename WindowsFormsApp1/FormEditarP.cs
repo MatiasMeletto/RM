@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 
 namespace WindowsFormsApp1
 {
-    public partial class FormEditar : Form
+    public partial class FormEditarP : Form
     {
         List<Plastico> plasticos = new List<Plastico>();
         int indice = -1;
@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
                 streamWriter.Write(JsonConvert.SerializeObject(plasticos));
             }
         }
-        public FormEditar()
+        public FormEditarP()
         {
             InitializeComponent();
             panelEdicion.Visible = false;

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class FormEditar
+    partial class FormEditarP
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadSueltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadBolsasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plasticoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.panelEdicion = new System.Windows.Forms.Panel();
+            this.btnCancelarEdicion = new System.Windows.Forms.Button();
+            this.btnAceptarEdicion = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,16 +49,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnAceptarEdicion = new System.Windows.Forms.Button();
-            this.btnCancelarEdicion = new System.Windows.Forms.Button();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadSueltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadBolsasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plasticoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelEdicion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.plasticoBindingSource)).BeginInit();
+            this.panelEdicion.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -73,9 +73,48 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            // 
+            // cantidadSueltaDataGridViewTextBoxColumn
+            // 
+            this.cantidadSueltaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cantidadSueltaDataGridViewTextBoxColumn.DataPropertyName = "CantidadSuelta";
+            this.cantidadSueltaDataGridViewTextBoxColumn.HeaderText = "CantidadSuelta";
+            this.cantidadSueltaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadSueltaDataGridViewTextBoxColumn.Name = "cantidadSueltaDataGridViewTextBoxColumn";
+            this.cantidadSueltaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantidadBolsasDataGridViewTextBoxColumn
+            // 
+            this.cantidadBolsasDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cantidadBolsasDataGridViewTextBoxColumn.DataPropertyName = "CantidadBolsas";
+            this.cantidadBolsasDataGridViewTextBoxColumn.HeaderText = "CantidadBolsas";
+            this.cantidadBolsasDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadBolsasDataGridViewTextBoxColumn.Name = "cantidadBolsasDataGridViewTextBoxColumn";
+            this.cantidadBolsasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // plasticoBindingSource
+            // 
+            this.plasticoBindingSource.DataSource = typeof(WindowsFormsApp1.Plastico);
+            // 
             // btnEliminar
             // 
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,6 +173,35 @@
             this.panelEdicion.Name = "panelEdicion";
             this.panelEdicion.Size = new System.Drawing.Size(520, 640);
             this.panelEdicion.TabIndex = 5;
+            // 
+            // btnCancelarEdicion
+            // 
+            this.btnCancelarEdicion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCancelarEdicion.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancelarEdicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarEdicion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarEdicion.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnCancelarEdicion.Location = new System.Drawing.Point(12, 592);
+            this.btnCancelarEdicion.Name = "btnCancelarEdicion";
+            this.btnCancelarEdicion.Size = new System.Drawing.Size(183, 36);
+            this.btnCancelarEdicion.TabIndex = 23;
+            this.btnCancelarEdicion.Text = "Cancelar edicion";
+            this.btnCancelarEdicion.UseVisualStyleBackColor = true;
+            this.btnCancelarEdicion.Click += new System.EventHandler(this.btnCancelarEdicion_Click);
+            // 
+            // btnAceptarEdicion
+            // 
+            this.btnAceptarEdicion.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAceptarEdicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptarEdicion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarEdicion.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAceptarEdicion.Location = new System.Drawing.Point(325, 592);
+            this.btnAceptarEdicion.Name = "btnAceptarEdicion";
+            this.btnAceptarEdicion.Size = new System.Drawing.Size(183, 36);
+            this.btnAceptarEdicion.TabIndex = 22;
+            this.btnAceptarEdicion.Text = "Confirmar edicion";
+            this.btnAceptarEdicion.UseVisualStyleBackColor = true;
+            this.btnAceptarEdicion.Click += new System.EventHandler(this.btnAceptarEdicion_Click);
             // 
             // label4
             // 
@@ -216,76 +284,7 @@
             this.textBox1.Size = new System.Drawing.Size(310, 34);
             this.textBox1.TabIndex = 14;
             // 
-            // btnAceptarEdicion
-            // 
-            this.btnAceptarEdicion.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnAceptarEdicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptarEdicion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarEdicion.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btnAceptarEdicion.Location = new System.Drawing.Point(325, 592);
-            this.btnAceptarEdicion.Name = "btnAceptarEdicion";
-            this.btnAceptarEdicion.Size = new System.Drawing.Size(183, 36);
-            this.btnAceptarEdicion.TabIndex = 22;
-            this.btnAceptarEdicion.Text = "Confirmar edicion";
-            this.btnAceptarEdicion.UseVisualStyleBackColor = true;
-            this.btnAceptarEdicion.UseWaitCursor = true;
-            this.btnAceptarEdicion.Click += new System.EventHandler(this.btnAceptarEdicion_Click);
-            // 
-            // btnCancelarEdicion
-            // 
-            this.btnCancelarEdicion.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnCancelarEdicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarEdicion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarEdicion.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btnCancelarEdicion.Location = new System.Drawing.Point(12, 592);
-            this.btnCancelarEdicion.Name = "btnCancelarEdicion";
-            this.btnCancelarEdicion.Size = new System.Drawing.Size(183, 36);
-            this.btnCancelarEdicion.TabIndex = 23;
-            this.btnCancelarEdicion.Text = "Cancelar edicion";
-            this.btnCancelarEdicion.UseVisualStyleBackColor = true;
-            this.btnCancelarEdicion.UseWaitCursor = true;
-            this.btnCancelarEdicion.Click += new System.EventHandler(this.btnCancelarEdicion_Click);
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            // 
-            // cantidadSueltaDataGridViewTextBoxColumn
-            // 
-            this.cantidadSueltaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cantidadSueltaDataGridViewTextBoxColumn.DataPropertyName = "CantidadSuelta";
-            this.cantidadSueltaDataGridViewTextBoxColumn.HeaderText = "CantidadSuelta";
-            this.cantidadSueltaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadSueltaDataGridViewTextBoxColumn.Name = "cantidadSueltaDataGridViewTextBoxColumn";
-            this.cantidadSueltaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cantidadBolsasDataGridViewTextBoxColumn
-            // 
-            this.cantidadBolsasDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cantidadBolsasDataGridViewTextBoxColumn.DataPropertyName = "CantidadBolsas";
-            this.cantidadBolsasDataGridViewTextBoxColumn.HeaderText = "CantidadBolsas";
-            this.cantidadBolsasDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadBolsasDataGridViewTextBoxColumn.Name = "cantidadBolsasDataGridViewTextBoxColumn";
-            this.cantidadBolsasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // plasticoBindingSource
-            // 
-            this.plasticoBindingSource.DataSource = typeof(WindowsFormsApp1.Plastico);
-            // 
-            // FormEditar
+            // FormEditarP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -298,13 +297,13 @@
             this.Controls.Add(this.panelEdicion);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormEditar";
+            this.Name = "FormEditarP";
             this.Text = "FormEditar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEditar_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plasticoBindingSource)).EndInit();
             this.panelEdicion.ResumeLayout(false);
             this.panelEdicion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.plasticoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
