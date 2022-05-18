@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApp1.ruedas
+﻿namespace WindowsFormsApp1.cerraduras
 {
-    partial class FormAgregarR
+    partial class FormAgregarCe
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,10 +37,21 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.label1.Location = new System.Drawing.Point(239, -54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 25);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Codigo:";
             // 
             // btnVolver
             // 
@@ -51,7 +63,7 @@
             this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(105, 36);
-            this.btnVolver.TabIndex = 26;
+            this.btnVolver.TabIndex = 59;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             // 
@@ -66,7 +78,7 @@
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(105, 36);
-            this.btnNuevo.TabIndex = 25;
+            this.btnNuevo.TabIndex = 58;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
             // 
@@ -78,7 +90,7 @@
             this.label4.Location = new System.Drawing.Point(99, 323);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 25);
-            this.label4.TabIndex = 24;
+            this.label4.TabIndex = 57;
             this.label4.Text = "Descripcion:";
             // 
             // textBox4
@@ -90,7 +102,7 @@
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(310, 125);
-            this.textBox4.TabIndex = 23;
+            this.textBox4.TabIndex = 56;
             // 
             // label3
             // 
@@ -100,7 +112,7 @@
             this.label3.Location = new System.Drawing.Point(99, 234);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(161, 25);
-            this.label3.TabIndex = 22;
+            this.label3.TabIndex = 55;
             this.label3.Text = "Cantidad Bolsas:";
             // 
             // textBox3
@@ -111,7 +123,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(310, 34);
-            this.textBox3.TabIndex = 21;
+            this.textBox3.TabIndex = 54;
             // 
             // label2
             // 
@@ -121,7 +133,7 @@
             this.label2.Location = new System.Drawing.Point(99, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 25);
-            this.label2.TabIndex = 20;
+            this.label2.TabIndex = 53;
             this.label2.Text = "Cantidad suelta:";
             // 
             // textBox2
@@ -132,18 +144,18 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(310, 34);
-            this.textBox2.TabIndex = 19;
+            this.textBox2.TabIndex = 52;
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label1.Location = new System.Drawing.Point(99, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 25);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Codigo:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.label5.Location = new System.Drawing.Point(99, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 25);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "Codigo:";
             // 
             // textBox1
             // 
@@ -153,7 +165,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(310, 34);
-            this.textBox1.TabIndex = 17;
+            this.textBox1.TabIndex = 50;
             // 
             // btnAgregar
             // 
@@ -165,11 +177,11 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(105, 36);
-            this.btnAgregar.TabIndex = 16;
+            this.btnAgregar.TabIndex = 49;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // FormAgregarR
+            // FormAgregarCe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,12 +195,13 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormAgregarR";
-            this.Text = "FormAgregarR";
+            this.Name = "FormAgregarCe";
+            this.Text = "FormAgregarCe";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,6 +209,7 @@
 
         #endregion
 
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label4;
@@ -204,7 +218,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnAgregar;
     }

@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.bisagras;
+using WindowsFormsApp1.cerraduras;
+using WindowsFormsApp1.cierres;
+using WindowsFormsApp1.escuadras;
+using WindowsFormsApp1.manijas;
 
 namespace WindowsFormsApp1
 {
@@ -87,6 +92,7 @@ namespace WindowsFormsApp1
             panelNav.Top = btnBisagras.Top;
             panelNav.Left = btnBisagras.Left;
             BtnSeleccionado(btnBisagras);
+            AbrirFormularioHijo(new FormBisagras());
         }
 
         private void btnManijas_Click(object sender, EventArgs e)
@@ -97,6 +103,7 @@ namespace WindowsFormsApp1
             panelNav.Top = btnManijas.Top;
             panelNav.Left = btnManijas.Left;
             BtnSeleccionado(btnManijas);
+            AbrirFormularioHijo(new FormManijas());
         }
 
         private void btnCerraduras_Click(object sender, EventArgs e)
@@ -107,6 +114,7 @@ namespace WindowsFormsApp1
             panelNav.Top = btnCerraduras.Top;
             panelNav.Left = btnCerraduras.Left;
             BtnSeleccionado(btnCerraduras);
+            AbrirFormularioHijo(new FormCerraduras());
         }
 
         private void btnCierres_Click(object sender, EventArgs e)
@@ -117,6 +125,7 @@ namespace WindowsFormsApp1
             panelNav.Top = btnCierres.Top;
             panelNav.Left = btnCierres.Left;
             BtnSeleccionado(btnCierres);
+            AbrirFormularioHijo(new FormCierres());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

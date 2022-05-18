@@ -49,11 +49,93 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bisagras\Bisagra.cs" />
+    <Compile Include="bisagras\FormAgregarB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bisagras\FormAgregarB.Designer.cs">
+      <DependentUpon>FormAgregarB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bisagras\FormBisagras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bisagras\FormBisagras.Designer.cs">
+      <DependentUpon>FormBisagras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bisagras\FormEditarB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bisagras\FormEditarB.Designer.cs">
+      <DependentUpon>FormEditarB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cerraduras\Cerradura.cs" />
+    <Compile Include="cerraduras\FormAgregarCe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cerraduras\FormAgregarCe.Designer.cs">
+      <DependentUpon>FormAgregarCe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cerraduras\FormCerraduras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cerraduras\FormCerraduras.Designer.cs">
+      <DependentUpon>FormCerraduras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cerraduras\FormEditarCe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cerraduras\FormEditarCe.Designer.cs">
+      <DependentUpon>FormEditarCe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cierres\Cierre.cs" />
+    <Compile Include="cierres\FormAgregarCi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cierres\FormAgregarCi.Designer.cs">
+      <DependentUpon>FormAgregarCi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cierres\FormCierres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cierres\FormCierres.Designer.cs">
+      <DependentUpon>FormCierres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cierres\FormEditarCi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cierres\FormEditarCi.Designer.cs">
+      <DependentUpon>FormEditarCi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="escuadras\Escuadra.cs" />
+    <Compile Include="escuadras\FormAgregarE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="escuadras\FormAgregarE.Designer.cs">
+      <DependentUpon>FormAgregarE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="escuadras\FormEditarE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="escuadras\FormEditarE.Designer.cs">
+      <DependentUpon>FormEditarE.cs</DependentUpon>
+    </Compile>
     <Compile Include="escuadras\FormEscuadras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="escuadras\FormEscuadras.Designer.cs">
       <DependentUpon>FormEscuadras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manijas\FormAgregarM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manijas\FormAgregarM.Designer.cs">
+      <DependentUpon>FormAgregarM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manijas\FormEditarM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manijas\FormEditarM.Designer.cs">
+      <DependentUpon>FormEditarM.cs</DependentUpon>
     </Compile>
     <Compile Include="manijas\FormManijas.cs">
       <SubType>Form</SubType>
@@ -61,6 +143,7 @@
     <Compile Include="manijas\FormManijas.Designer.cs">
       <DependentUpon>FormManijas.cs</DependentUpon>
     </Compile>
+    <Compile Include="manijas\Manija.cs" />
     <Compile Include="plasticos\FormAgregarP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +174,11 @@
     <Compile Include="menus\FormAccesoriosMenu.Designer.cs">
       <DependentUpon>FormAccesoriosMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ruedas\EditarR.cs">
+    <Compile Include="ruedas\FormEditarR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ruedas\EditarR.Designer.cs">
-      <DependentUpon>EditarR.cs</DependentUpon>
+    <Compile Include="ruedas\FormEditarR.Designer.cs">
+      <DependentUpon>FormEditarR.cs</DependentUpon>
     </Compile>
     <Compile Include="ruedas\FormAgregarR.cs">
       <SubType>Form</SubType>
@@ -113,8 +196,47 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ruedas\Rueda.cs" />
+    <EmbeddedResource Include="bisagras\FormAgregarB.resx">
+      <DependentUpon>FormAgregarB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bisagras\FormBisagras.resx">
+      <DependentUpon>FormBisagras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bisagras\FormEditarB.resx">
+      <DependentUpon>FormEditarB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cerraduras\FormAgregarCe.resx">
+      <DependentUpon>FormAgregarCe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cerraduras\FormCerraduras.resx">
+      <DependentUpon>FormCerraduras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cerraduras\FormEditarCe.resx">
+      <DependentUpon>FormEditarCe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cierres\FormAgregarCi.resx">
+      <DependentUpon>FormAgregarCi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cierres\FormCierres.resx">
+      <DependentUpon>FormCierres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cierres\FormEditarCi.resx">
+      <DependentUpon>FormEditarCi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="escuadras\FormAgregarE.resx">
+      <DependentUpon>FormAgregarE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="escuadras\FormEditarE.resx">
+      <DependentUpon>FormEditarE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="escuadras\FormEscuadras.resx">
       <DependentUpon>FormEscuadras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manijas\FormAgregarM.resx">
+      <DependentUpon>FormAgregarM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manijas\FormEditarM.resx">
+      <DependentUpon>FormEditarM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manijas\FormManijas.resx">
       <DependentUpon>FormManijas.cs</DependentUpon>
@@ -134,8 +256,8 @@
     <EmbeddedResource Include="plasticos\FormPlasticos.resx">
       <DependentUpon>FormPlasticos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ruedas\EditarR.resx">
-      <DependentUpon>EditarR.cs</DependentUpon>
+    <EmbeddedResource Include="ruedas\FormEditarR.resx">
+      <DependentUpon>FormEditarR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ruedas\FormAgregarR.resx">
       <DependentUpon>FormAgregarR.cs</DependentUpon>
@@ -156,6 +278,12 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\FormRuedas.datasource" />
     <None Include="Properties\DataSources\Plastico.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.bisagras.Bisagra.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.cerraduras.Cerradura.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.cierres.Cierre.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.escuadras.Escuadra.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.manijas.FormManijas.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.manijas.Manija.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.ruedas.Rueda.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -173,10 +301,6 @@
   <ItemGroup>
     <None Include="Resources\Sin título.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bisagras\" />
-    <Folder Include="cerraduras\" />
-    <Folder Include="cierres\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
