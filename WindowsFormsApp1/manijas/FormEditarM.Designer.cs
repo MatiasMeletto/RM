@@ -44,10 +44,10 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.manijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelEdicion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manijaBindingSource)).BeginInit();
@@ -65,6 +65,7 @@
             this.btnVolver.TabIndex = 9;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnEditar
             // 
@@ -78,6 +79,7 @@
             this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // dataGridView1
             // 
@@ -95,6 +97,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(438, 478);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // btnEliminar
             // 
@@ -109,6 +112,7 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panelEdicion
             // 
@@ -142,6 +146,7 @@
             this.btnCancelarEdicion.TabIndex = 23;
             this.btnCancelarEdicion.Text = "Cancelar edicion";
             this.btnCancelarEdicion.UseVisualStyleBackColor = true;
+            this.btnCancelarEdicion.Click += new System.EventHandler(this.btnCancelarEdicion_Click);
             // 
             // btnAceptarEdicion
             // 
@@ -155,6 +160,7 @@
             this.btnAceptarEdicion.TabIndex = 22;
             this.btnAceptarEdicion.Text = "Confirmar edicion";
             this.btnAceptarEdicion.UseVisualStyleBackColor = true;
+            this.btnAceptarEdicion.Click += new System.EventHandler(this.btnAceptarEdicion_Click);
             // 
             // label4
             // 
@@ -237,10 +243,6 @@
             this.textBox1.Size = new System.Drawing.Size(310, 34);
             this.textBox1.TabIndex = 14;
             // 
-            // manijaBindingSource
-            // 
-            this.manijaBindingSource.DataSource = typeof(WindowsFormsApp1.manijas.Manija);
-            // 
             // codigoDataGridViewTextBoxColumn
             // 
             this.codigoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -264,6 +266,10 @@
             this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
             this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // manijaBindingSource
+            // 
+            this.manijaBindingSource.DataSource = typeof(WindowsFormsApp1.manijas.Manija);
             // 
             // FormEditarM
             // 

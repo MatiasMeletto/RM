@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManijas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnEditarCantidadB = new System.Windows.Forms.Button();
             this.panelModificarCantidad = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,9 +46,14 @@
             this.btnEditarLista = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manijaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panelModificarCantidad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manijaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRefrescar
@@ -87,6 +95,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -99,6 +108,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Editar accesorios";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAgregar
             // 
@@ -112,21 +122,7 @@
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar accesorios";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
-            // btnEditarCantidadB
-            // 
-            this.btnEditarCantidadB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEditarCantidadB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.btnEditarCantidadB.FlatAppearance.BorderSize = 0;
-            this.btnEditarCantidadB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarCantidadB.Font = new System.Drawing.Font("Calibri", 11F);
-            this.btnEditarCantidadB.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEditarCantidadB.Location = new System.Drawing.Point(362, 687);
-            this.btnEditarCantidadB.Name = "btnEditarCantidadB";
-            this.btnEditarCantidadB.Size = new System.Drawing.Size(200, 38);
-            this.btnEditarCantidadB.TabIndex = 23;
-            this.btnEditarCantidadB.Text = "Modificar cantidad /b";
-            this.btnEditarCantidadB.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // panelModificarCantidad
             // 
@@ -176,6 +172,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(333, 24);
             this.textBox2.TabIndex = 6;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // btnEditarCantidadS
             // 
@@ -187,10 +184,11 @@
             this.btnEditarCantidadS.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.btnEditarCantidadS.Location = new System.Drawing.Point(156, 687);
             this.btnEditarCantidadS.Name = "btnEditarCantidadS";
-            this.btnEditarCantidadS.Size = new System.Drawing.Size(200, 38);
+            this.btnEditarCantidadS.Size = new System.Drawing.Size(177, 38);
             this.btnEditarCantidadS.TabIndex = 20;
-            this.btnEditarCantidadS.Text = "Modificar cantidad /s ";
+            this.btnEditarCantidadS.Text = "Modificar cantidad";
             this.btnEditarCantidadS.UseVisualStyleBackColor = false;
+            this.btnEditarCantidadS.Click += new System.EventHandler(this.btnEditarCantidadS_Click);
             // 
             // btnEditarLista
             // 
@@ -206,6 +204,7 @@
             this.btnEditarLista.TabIndex = 19;
             this.btnEditarLista.Text = "Editar lista";
             this.btnEditarLista.UseVisualStyleBackColor = false;
+            this.btnEditarLista.Click += new System.EventHandler(this.btnEditarLista_Click);
             // 
             // textBox1
             // 
@@ -219,19 +218,70 @@
             this.textBox1.Size = new System.Drawing.Size(300, 39);
             this.textBox1.TabIndex = 18;
             this.textBox1.Text = "Codigo de accesorio...";
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.manijaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(156, 170);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(992, 502);
             this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10.2F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.codigoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10.2F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.cantidadDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.descripcionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // manijaBindingSource
+            // 
+            this.manijaBindingSource.DataSource = typeof(WindowsFormsApp1.manijas.Manija);
             // 
             // FormManijas
             // 
@@ -241,7 +291,6 @@
             this.ClientSize = new System.Drawing.Size(1326, 800);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnEditarCantidadB);
             this.Controls.Add(this.panelModificarCantidad);
             this.Controls.Add(this.btnEditarCantidadS);
             this.Controls.Add(this.btnEditarLista);
@@ -254,6 +303,7 @@
             this.panelModificarCantidad.ResumeLayout(false);
             this.panelModificarCantidad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manijaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +316,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnEditarCantidadB;
         private System.Windows.Forms.Panel panelModificarCantidad;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label1;
@@ -275,5 +324,9 @@
         private System.Windows.Forms.Button btnEditarLista;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource manijaBindingSource;
     }
 }
