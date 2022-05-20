@@ -282,6 +282,7 @@
     <None Include="Properties\DataSources\WindowsFormsApp1.cerraduras.Cerradura.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.cierres.Cierre.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.escuadras.Escuadra.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.escuadras.FormEscuadras.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.manijas.FormManijas.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.manijas.Manija.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.ruedas.Rueda.datasource" />

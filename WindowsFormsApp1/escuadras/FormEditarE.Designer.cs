@@ -32,6 +32,11 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadSueltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadBolsasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.escuadraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panelEdicion = new System.Windows.Forms.Panel();
             this.btnCancelarEdicion = new System.Windows.Forms.Button();
@@ -44,14 +49,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.escuadraBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadSueltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadBolsasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelEdicion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.escuadraBindingSource)).BeginInit();
+            this.panelEdicion.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -66,6 +66,7 @@
             this.btnVolver.TabIndex = 13;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnEditar
             // 
@@ -79,6 +80,7 @@
             this.btnEditar.TabIndex = 12;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // dataGridView1
             // 
@@ -97,6 +99,43 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(438, 478);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            // 
+            // cantidadSueltaDataGridViewTextBoxColumn
+            // 
+            this.cantidadSueltaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cantidadSueltaDataGridViewTextBoxColumn.DataPropertyName = "CantidadSuelta";
+            this.cantidadSueltaDataGridViewTextBoxColumn.HeaderText = "CantidadSuelta";
+            this.cantidadSueltaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadSueltaDataGridViewTextBoxColumn.Name = "cantidadSueltaDataGridViewTextBoxColumn";
+            // 
+            // cantidadBolsasDataGridViewTextBoxColumn
+            // 
+            this.cantidadBolsasDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cantidadBolsasDataGridViewTextBoxColumn.DataPropertyName = "CantidadBolsas";
+            this.cantidadBolsasDataGridViewTextBoxColumn.HeaderText = "CantidadBolsas";
+            this.cantidadBolsasDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cantidadBolsasDataGridViewTextBoxColumn.Name = "cantidadBolsasDataGridViewTextBoxColumn";
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // escuadraBindingSource
+            // 
+            this.escuadraBindingSource.DataSource = typeof(WindowsFormsApp1.escuadras.Escuadra);
             // 
             // btnEliminar
             // 
@@ -111,6 +150,7 @@
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panelEdicion
             // 
@@ -144,6 +184,7 @@
             this.btnCancelarEdicion.TabIndex = 23;
             this.btnCancelarEdicion.Text = "Cancelar edicion";
             this.btnCancelarEdicion.UseVisualStyleBackColor = true;
+            this.btnCancelarEdicion.Click += new System.EventHandler(this.btnCancelarEdicion_Click);
             // 
             // btnAceptarEdicion
             // 
@@ -157,6 +198,7 @@
             this.btnAceptarEdicion.TabIndex = 22;
             this.btnAceptarEdicion.Text = "Confirmar edicion";
             this.btnAceptarEdicion.UseVisualStyleBackColor = true;
+            this.btnAceptarEdicion.Click += new System.EventHandler(this.btnAceptarEdicion_Click);
             // 
             // label4
             // 
@@ -239,42 +281,6 @@
             this.textBox1.Size = new System.Drawing.Size(310, 34);
             this.textBox1.TabIndex = 14;
             // 
-            // escuadraBindingSource
-            // 
-            this.escuadraBindingSource.DataSource = typeof(WindowsFormsApp1.escuadras.Escuadra);
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            // 
-            // cantidadSueltaDataGridViewTextBoxColumn
-            // 
-            this.cantidadSueltaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cantidadSueltaDataGridViewTextBoxColumn.DataPropertyName = "CantidadSuelta";
-            this.cantidadSueltaDataGridViewTextBoxColumn.HeaderText = "CantidadSuelta";
-            this.cantidadSueltaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadSueltaDataGridViewTextBoxColumn.Name = "cantidadSueltaDataGridViewTextBoxColumn";
-            // 
-            // cantidadBolsasDataGridViewTextBoxColumn
-            // 
-            this.cantidadBolsasDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cantidadBolsasDataGridViewTextBoxColumn.DataPropertyName = "CantidadBolsas";
-            this.cantidadBolsasDataGridViewTextBoxColumn.HeaderText = "CantidadBolsas";
-            this.cantidadBolsasDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cantidadBolsasDataGridViewTextBoxColumn.Name = "cantidadBolsasDataGridViewTextBoxColumn";
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            // 
             // FormEditarE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -290,9 +296,9 @@
             this.Name = "FormEditarE";
             this.Text = "FormEditarE";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escuadraBindingSource)).EndInit();
             this.panelEdicion.ResumeLayout(false);
             this.panelEdicion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.escuadraBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

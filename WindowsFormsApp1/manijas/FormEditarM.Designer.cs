@@ -38,8 +38,6 @@
             this.btnAceptarEdicion = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -120,8 +118,6 @@
             this.panelEdicion.Controls.Add(this.btnAceptarEdicion);
             this.panelEdicion.Controls.Add(this.label4);
             this.panelEdicion.Controls.Add(this.textBox4);
-            this.panelEdicion.Controls.Add(this.label3);
-            this.panelEdicion.Controls.Add(this.textBox3);
             this.panelEdicion.Controls.Add(this.label2);
             this.panelEdicion.Controls.Add(this.textBox2);
             this.panelEdicion.Controls.Add(this.label1);
@@ -167,7 +163,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label4.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label4.Location = new System.Drawing.Point(97, 312);
+            this.label4.Location = new System.Drawing.Point(97, 230);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 25);
             this.label4.TabIndex = 21;
@@ -177,31 +173,11 @@
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox4.Location = new System.Drawing.Point(102, 340);
+            this.textBox4.Location = new System.Drawing.Point(102, 258);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(310, 125);
             this.textBox4.TabIndex = 20;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label3.Location = new System.Drawing.Point(97, 223);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 25);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Cantidad Bolsas:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox3.Location = new System.Drawing.Point(102, 251);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(310, 34);
-            this.textBox3.TabIndex = 18;
             // 
             // label2
             // 
@@ -210,9 +186,9 @@
             this.label2.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.label2.Location = new System.Drawing.Point(97, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 25);
+            this.label2.Size = new System.Drawing.Size(97, 25);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Cantidad suelta:";
+            this.label2.Text = "Cantidad:";
             // 
             // textBox2
             // 
@@ -277,11 +253,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(520, 640);
+            this.Controls.Add(this.panelEdicion);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.panelEdicion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEditarM";
             this.Text = "FormEditarM";
@@ -304,8 +280,6 @@
         private System.Windows.Forms.Button btnAceptarEdicion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;

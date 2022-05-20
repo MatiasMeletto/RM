@@ -54,6 +54,7 @@
             this.btnVolver.TabIndex = 37;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnNuevo
             // 
@@ -69,6 +70,7 @@
             this.btnNuevo.TabIndex = 36;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // label4
             // 
@@ -168,6 +170,7 @@
             this.btnAgregar.TabIndex = 27;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // FormAgregarE
             // 
@@ -189,6 +192,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAgregarE";
             this.Text = "FormAgregarE";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAgregarE_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
