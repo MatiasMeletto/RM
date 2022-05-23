@@ -48,11 +48,11 @@
             this.btnEditarLista = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ruedaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadSueltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadBolsasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ruedaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panelModificarCantidad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -72,7 +72,7 @@
             this.btnRefrescar.Size = new System.Drawing.Size(31, 25);
             this.btnRefrescar.TabIndex = 14;
             this.btnRefrescar.UseVisualStyleBackColor = false;
-            this.btnRefrescar.Visible = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // panel1
             // 
@@ -238,6 +238,7 @@
             this.textBox1.TabIndex = 10;
             this.textBox1.Text = "Codigo de accesorio...";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // dataGridView1
             // 
@@ -259,10 +260,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(992, 502);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
-            // 
-            // ruedaBindingSource
-            // 
-            this.ruedaBindingSource.DataSource = typeof(WindowsFormsApp1.ruedas.Rueda);
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -315,6 +312,10 @@
             this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
             this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // ruedaBindingSource
+            // 
+            this.ruedaBindingSource.DataSource = typeof(WindowsFormsApp1.ruedas.Rueda);
             // 
             // FormRuedas
             // 

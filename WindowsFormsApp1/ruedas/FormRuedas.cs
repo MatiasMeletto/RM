@@ -46,6 +46,42 @@ namespace WindowsFormsApp1
             }
             return Errores;
         }
+        private List<Rueda> Buscador()
+        {
+            List<Rueda> encontrados = new List<Rueda>();
+            encontrados.Clear();
+            char[] nombreBuscado = textBox1.Text.ToArray();
+
+            for (int i = 0; i < nombreBuscado.Length; i++)
+            {
+                nombreBuscado[i] = Char.ToUpper(nombreBuscado[i]);
+            }
+
+            foreach (Rueda p in ruedas)
+            {
+                int i = 0;
+
+                foreach (char c in nombreBuscado)
+                {
+                    foreach (var pr in p.Codigo)
+                    {
+                        if (pr == c)
+                        {
+                            encontrados.Add(p);
+                            i++;
+                            break;
+                        }
+                    }
+                    if (i == 1)
+                        break;
+                }
+            }
+
+            Array.Clear(nombreBuscado, 0, nombreBuscado.Length);
+            Array.Resize<char>(ref nombreBuscado, 0);
+
+            return encontrados;
+        }
         private void LeerArchivo()
         {
             FileInfo fi = new FileInfo("ruedas.json");
@@ -181,6 +217,20 @@ namespace WindowsFormsApp1
             panel1.Enabled = false;
             panel1.SendToBack();
             LeerArchivo();
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dataGridView1.DataSource = Buscador();
+                textBox1.Text = "";
+            }
         }
     }
 }

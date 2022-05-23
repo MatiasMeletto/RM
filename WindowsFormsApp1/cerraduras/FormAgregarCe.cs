@@ -122,5 +122,62 @@ namespace WindowsFormsApp1.cerraduras
         {
             EscribirLista();
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+                if (Errores.Count != 0)
+                {
+                    foreach (string E in Errores)
+                        MessageBox.Show(E);
+                    return;
+                }
+
+                Cerradura c = new Cerradura(textBox1.Text, int.Parse(textBox2.Text), textBox4.Text);
+                cerraduras.Add(c);
+
+                Bloquear(true);
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+                if (Errores.Count != 0)
+                {
+                    foreach (string E in Errores)
+                        MessageBox.Show(E);
+                    return;
+                }
+
+                Cerradura c = new Cerradura(textBox1.Text, int.Parse(textBox2.Text), textBox4.Text);
+                cerraduras.Add(c);
+
+                Bloquear(true);
+            }
+        }
+
+        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+                if (Errores.Count != 0)
+                {
+                    foreach (string E in Errores)
+                        MessageBox.Show(E);
+                    return;
+                }
+
+                Cerradura c = new Cerradura(textBox1.Text, int.Parse(textBox2.Text), textBox4.Text);
+                cerraduras.Add(c);
+
+                Bloquear(true);
+            }
+        }
     }
 }

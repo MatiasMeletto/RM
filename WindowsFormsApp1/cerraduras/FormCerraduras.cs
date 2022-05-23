@@ -26,6 +26,42 @@ namespace WindowsFormsApp1.cerraduras
             form.BringToFront();
             form.Show();
         }
+        private List<Cerradura> Buscador()
+        {
+            List<Cerradura> encontrados = new List<Cerradura>();
+            encontrados.Clear();
+            char[] nombreBuscado = textBox1.Text.ToArray();
+
+            for (int i = 0; i < nombreBuscado.Length; i++)
+            {
+                nombreBuscado[i] = Char.ToUpper(nombreBuscado[i]);
+            }
+
+            foreach (Cerradura p in cerraduras)
+            {
+                int i = 0;
+
+                foreach (char c in nombreBuscado)
+                {
+                    foreach (var pr in p.Codigo)
+                    {
+                        if (pr == c)
+                        {
+                            encontrados.Add(p);
+                            i++;
+                            break;
+                        }
+                    }
+                    if (i == 1)
+                        break;
+                }
+            }
+
+            Array.Clear(nombreBuscado, 0, nombreBuscado.Length);
+            Array.Resize<char>(ref nombreBuscado, 0);
+
+            return encontrados;
+        }
         private List<string> ValidarDatos()
         {
             List<string> Errores = new List<string>();
@@ -154,6 +190,20 @@ namespace WindowsFormsApp1.cerraduras
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new FormEditarCe());
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            ActualizarGrilla();
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dataGridView1.DataSource = Buscador();
+                textBox1.Text = "";
+            }
         }
     }
 }

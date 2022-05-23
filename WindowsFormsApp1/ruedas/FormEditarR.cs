@@ -169,5 +169,105 @@ namespace WindowsFormsApp1.ruedas
             panel1.Visible = false;
             panel1.Enabled = false;
         }
+
+        private void textBoxCodigo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Rueda r = new Rueda(textBoxCodigo.Text, int.Parse(textBoxCantidadS.Text), int.Parse(textBoxCantidadB.Text), textBoxDescripcion.Text);
+                ruedas[indice] = r;
+
+                panel1.SendToBack();
+                panel1.Visible = false;
+                panel1.Enabled = false;
+                ActualizarGrilla();
+            }
+        }
+
+        private void textBoxCantidadS_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Rueda r = new Rueda(textBoxCodigo.Text, int.Parse(textBoxCantidadS.Text), int.Parse(textBoxCantidadB.Text), textBoxDescripcion.Text);
+                ruedas[indice] = r;
+
+                panel1.SendToBack();
+                panel1.Visible = false;
+                panel1.Enabled = false;
+                ActualizarGrilla();
+            }
+        }
+
+        private void textBoxCantidadB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Rueda r = new Rueda(textBoxCodigo.Text, int.Parse(textBoxCantidadS.Text), int.Parse(textBoxCantidadB.Text), textBoxDescripcion.Text);
+                ruedas[indice] = r;
+
+                panel1.SendToBack();
+                panel1.Visible = false;
+                panel1.Enabled = false;
+                ActualizarGrilla();
+            }
+        }
+
+        private void textBoxDescripcion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Rueda r = new Rueda(textBoxCodigo.Text, int.Parse(textBoxCantidadS.Text), int.Parse(textBoxCantidadB.Text), textBoxDescripcion.Text);
+                ruedas[indice] = r;
+
+                panel1.SendToBack();
+                panel1.Visible = false;
+                panel1.Enabled = false;
+                ActualizarGrilla();
+            }
+        }
     }
 }

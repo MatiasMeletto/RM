@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelEdicion = new System.Windows.Forms.Panel();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -74,20 +74,6 @@
             this.panelEdicion.Size = new System.Drawing.Size(520, 640);
             this.panelEdicion.TabIndex = 6;
             // 
-            // btnVolver
-            // 
-            this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btnVolver.Location = new System.Drawing.Point(12, 592);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(105, 36);
-            this.btnVolver.TabIndex = 27;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
             // btnEditar
             // 
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
@@ -101,6 +87,21 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEliminar.Location = new System.Drawing.Point(374, 522);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(105, 36);
+            this.btnEliminar.TabIndex = 25;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dataGridView1
             // 
@@ -121,20 +122,19 @@
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
-            // btnEliminar
+            // btnVolver
             // 
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEliminar.Location = new System.Drawing.Point(374, 522);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(105, 36);
-            this.btnEliminar.TabIndex = 25;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnVolver.Location = new System.Drawing.Point(12, 592);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(105, 36);
+            this.btnVolver.TabIndex = 27;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // panel1
             // 
@@ -206,6 +206,7 @@
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(310, 125);
             this.textBoxDescripcion.TabIndex = 20;
+            this.textBoxDescripcion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDescripcion_KeyDown);
             // 
             // btnCancelarEdicion
             // 
@@ -253,6 +254,7 @@
             this.textBoxCantidadB.Name = "textBoxCantidadB";
             this.textBoxCantidadB.Size = new System.Drawing.Size(310, 34);
             this.textBoxCantidadB.TabIndex = 18;
+            this.textBoxCantidadB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCantidadB_KeyDown);
             // 
             // label7
             // 
@@ -273,6 +275,7 @@
             this.textBoxCantidadS.Name = "textBoxCantidadS";
             this.textBoxCantidadS.Size = new System.Drawing.Size(310, 34);
             this.textBoxCantidadS.TabIndex = 16;
+            this.textBoxCantidadS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCantidadS_KeyDown);
             // 
             // label8
             // 
@@ -293,6 +296,7 @@
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(310, 34);
             this.textBoxCodigo.TabIndex = 14;
+            this.textBoxCodigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCodigo_KeyDown);
             // 
             // codigoDataGridViewTextBoxColumn
             // 

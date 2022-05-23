@@ -154,5 +154,80 @@ namespace WindowsFormsApp1.manijas
             panelEdicion.Visible = false;
             panelEdicion.Enabled = false;
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Manija m = new Manija(textBox1.Text, int.Parse(textBox2.Text), textBox4.Text);
+                manijas[indice] = m;
+
+                panelEdicion.SendToBack();
+                panelEdicion.Visible = false;
+                panelEdicion.Enabled = false;
+                ActualizarGrilla();
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Manija m = new Manija(textBox1.Text, int.Parse(textBox2.Text), textBox4.Text);
+                manijas[indice] = m;
+
+                panelEdicion.SendToBack();
+                panelEdicion.Visible = false;
+                panelEdicion.Enabled = false;
+                ActualizarGrilla();
+            }
+        }
+
+        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Manija m = new Manija(textBox1.Text, int.Parse(textBox2.Text), textBox4.Text);
+                manijas[indice] = m;
+
+                panelEdicion.SendToBack();
+                panelEdicion.Visible = false;
+                panelEdicion.Enabled = false;
+                ActualizarGrilla();
+            }
+        }
     }
 }

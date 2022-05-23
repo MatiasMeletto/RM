@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEscuadras));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEscuadras));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -47,18 +47,18 @@
             this.btnEditarLista = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnRefrescar = new System.Windows.Forms.Button();
-            this.formEscuadrasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.escuadraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadSueltaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadBolsasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.escuadraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRefrescar = new System.Windows.Forms.Button();
+            this.formEscuadrasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panelModificarCantidad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formEscuadrasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escuadraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formEscuadrasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -225,6 +225,7 @@
             this.textBox1.TabIndex = 26;
             this.textBox1.Text = "Codigo de accesorio...";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // dataGridView1
             // 
@@ -246,29 +247,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(992, 502);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.btnRefrescar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.BackgroundImage")));
-            this.btnRefrescar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefrescar.FlatAppearance.BorderSize = 0;
-            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefrescar.Location = new System.Drawing.Point(1117, 139);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(31, 25);
-            this.btnRefrescar.TabIndex = 30;
-            this.btnRefrescar.UseVisualStyleBackColor = false;
-            this.btnRefrescar.Visible = false;
-            // 
-            // formEscuadrasBindingSource
-            // 
-            this.formEscuadrasBindingSource.DataSource = typeof(WindowsFormsApp1.escuadras.FormEscuadras);
-            // 
-            // escuadraBindingSource
-            // 
-            this.escuadraBindingSource.DataSource = typeof(WindowsFormsApp1.escuadras.Escuadra);
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -322,6 +300,29 @@
             this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
             // 
+            // escuadraBindingSource
+            // 
+            this.escuadraBindingSource.DataSource = typeof(WindowsFormsApp1.escuadras.Escuadra);
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnRefrescar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.BackgroundImage")));
+            this.btnRefrescar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRefrescar.FlatAppearance.BorderSize = 0;
+            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefrescar.Location = new System.Drawing.Point(1117, 139);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(31, 25);
+            this.btnRefrescar.TabIndex = 30;
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
+            // formEscuadrasBindingSource
+            // 
+            this.formEscuadrasBindingSource.DataSource = typeof(WindowsFormsApp1.escuadras.FormEscuadras);
+            // 
             // FormEscuadras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -343,8 +344,8 @@
             this.panelModificarCantidad.ResumeLayout(false);
             this.panelModificarCantidad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formEscuadrasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.escuadraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formEscuadrasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

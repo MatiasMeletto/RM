@@ -168,5 +168,105 @@ namespace WindowsFormsApp1.escuadras
             panelEdicion.Enabled = false;
             panelEdicion.SendToBack();
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Escuadra esc = new Escuadra(textBox1.Text, int.Parse(textBox2.Text), int.Parse(textBox3.Text), textBox4.Text);
+                escuadras[indice] = esc;
+
+                panelEdicion.Visible = false;
+                panelEdicion.Enabled = false;
+                panelEdicion.SendToBack();
+                ActualizarGrilla();
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Escuadra esc = new Escuadra(textBox1.Text, int.Parse(textBox2.Text), int.Parse(textBox3.Text), textBox4.Text);
+                escuadras[indice] = esc;
+
+                panelEdicion.Visible = false;
+                panelEdicion.Enabled = false;
+                panelEdicion.SendToBack();
+                ActualizarGrilla();
+            }
+        }
+
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Escuadra esc = new Escuadra(textBox1.Text, int.Parse(textBox2.Text), int.Parse(textBox3.Text), textBox4.Text);
+                escuadras[indice] = esc;
+
+                panelEdicion.Visible = false;
+                panelEdicion.Enabled = false;
+                panelEdicion.SendToBack();
+                ActualizarGrilla();
+            }
+        }
+
+        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+
+                if (Errores.Count() != 0)
+                {
+                    foreach (string E in Errores)
+                    {
+                        MessageBox.Show(E);
+                    }
+                    return;
+                }
+
+                Escuadra esc = new Escuadra(textBox1.Text, int.Parse(textBox2.Text), int.Parse(textBox3.Text), textBox4.Text);
+                escuadras[indice] = esc;
+
+                panelEdicion.Visible = false;
+                panelEdicion.Enabled = false;
+                panelEdicion.SendToBack();
+                ActualizarGrilla();
+            }
+        }
     }
 }

@@ -137,5 +137,81 @@ namespace WindowsFormsApp1
         {
             EscribirLista();
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+                if (Errores.Count != 0)
+                {
+                    foreach (string E in Errores)
+                        MessageBox.Show(E);
+                    return;
+                }
+
+                Plastico p = new Plastico(textBox1.Text, int.Parse(textBox2.Text), int.Parse(textBox3.Text), textBox4.Text);
+                plasticos.Add(p);
+
+                Bloquear(true);
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+                if (Errores.Count != 0)
+                {
+                    foreach (string E in Errores)
+                        MessageBox.Show(E);
+                    return;
+                }
+
+                Plastico p = new Plastico(textBox1.Text, int.Parse(textBox2.Text), int.Parse(textBox3.Text), textBox4.Text);
+                plasticos.Add(p);
+
+                Bloquear(true);
+            }
+        }
+
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+                if (Errores.Count != 0)
+                {
+                    foreach (string E in Errores)
+                        MessageBox.Show(E);
+                    return;
+                }
+
+                Plastico p = new Plastico(textBox1.Text, int.Parse(textBox2.Text), int.Parse(textBox3.Text), textBox4.Text);
+                plasticos.Add(p);
+
+                Bloquear(true);
+            }
+        }
+
+        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<string> Errores = ValidarDatos();
+                if (Errores.Count != 0)
+                {
+                    foreach (string E in Errores)
+                        MessageBox.Show(E);
+                    return;
+                }
+
+                Plastico p = new Plastico(textBox1.Text, int.Parse(textBox2.Text), int.Parse(textBox3.Text), textBox4.Text);
+                plasticos.Add(p);
+
+                Bloquear(true);
+            }
+        }
     }
 }

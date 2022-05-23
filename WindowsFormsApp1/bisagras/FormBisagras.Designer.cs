@@ -223,6 +223,7 @@
             this.textBox1.TabIndex = 50;
             this.textBox1.Text = "Codigo de accesorio...";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // dataGridView1
             // 
@@ -314,7 +315,7 @@
             this.btnRefrescar.Size = new System.Drawing.Size(31, 25);
             this.btnRefrescar.TabIndex = 54;
             this.btnRefrescar.UseVisualStyleBackColor = false;
-            this.btnRefrescar.Visible = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // FormBisagras
             // 
